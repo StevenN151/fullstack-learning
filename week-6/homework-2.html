@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 6</title>
+  </head>
+  <body>
+    <script>
+      //home work 1
+      function introduceMySelf(name, age) {
+        //create a variable result of paragraph include name and age
+        let introduceMySelfResult = `I am ${name}! I am ${age} years old !`;
+        //return
+        return introduceMySelfResult;
+      }
+      //put any name and age to test
+      let test1 = introduceMySelf('Alice', 10);
+      console.log(test1);
+
+      //homework 2
+      function getSentenceLength(sentence) {
+        let getSentenceLength;
+        for (let i = 0; i < sentence.length; i++) {
+          let getSentenceLengthResult = `${sentence} has ${sentence.length} characters!`;
+          return getSentenceLengthResult;
+        }
+      }
+      let test2 = getSentenceLength('Hello, World!');
+      console.log(test2);
+
+      //homework 3
+      function add(x, y) {
+        let addResult = x + y;
+        return addResult;
+      }
+      let test3 = add(5, 7);
+      console.log(test3);
+
+      //homework 4
+      function minus(x, y) {
+        let minusResult = x - y;
+        return minusResult;
+      }
+      let test4 = minus(35, 13);
+      console.log(test4);
+
+      //homework 5
+      function divide(x, y) {
+        let divideResult = x / y;
+        return divideResult;
+      }
+      let test5 = divide(25, 5);
+      console.log(test5);
+
+      //homework 6
+      function multiply(x, y) {
+        let multiplyResult = x * y;
+        return multiplyResult;
+      }
+      let test6 = multiply(7, 10);
+      console.log(test6);
+
+      //homework 7
+      function getAverage(x, y) {
+        let addResult = x + y;
+        let getAverageResult = addResult / 2;
+        return getAverageResult;
+      }
+      let test7 = getAverage(15, 25);
+      console.log(test7);
+
+      //homework 8
+      function checkExamResult(score) {
+        if (score >= 50) {
+          return 'Pass';
+        }
+        if (score < 50) {
+          return 'Fail';
+        }
+      }
+      let test8 = checkExamResult(35);
+      console.log(test8);
+
+      //homework 9
+      function getGrade(score) {
+        if (score >= 90) {
+          return 'A';
+        }
+        if (score >= 80 && score < 90) {
+          return 'B';
+        }
+        if (score >= 70 && score < 80) {
+          return 'C';
+        }
+        if (score >= 60 && score < 70) {
+          return 'D';
+        }
+        if (score >= 50 && score < 60) {
+          return 'E';
+        } else score < 50;
+        return 'F';
+      }
+      let test9 = getGrade(46);
+      console.log(test9);
+
+      //homework 10
+      function printNumbers(number) {
+        for (let i = 1; i <= number; i++) {
+          console.log(i);
+        }
+      }
+      let test10 = printNumbers(3);
+      console.log(test10);
+
+      //homework 11
+      function printNames(names) {
+        for (let i = 0; i < names.length; i++) {
+          console.log(names[i]);
+        }
+      }
+      let test11 = printNames(['Hoang', 'Jack', 'Steven']);
+      console.log(test11);
+
+      //homework 12
+      function printFavouriteGames(games) {
+        for (let i = 0; i < games.length; i++) {
+          let FavouriteGames = `${i + 1}. I love ${games[i]}!`;
+          console.log(FavouriteGames);
+        }
+      }
+      let test12 = printFavouriteGames(['PUBG', 'Warzone', 'LOL']);
+      console.log(test12);
+
+      //homework 13
+      function findAnimalIndex(animals, animalName) {
+        for (let i = 0; i < animals.length; i++) {
+          let currentAnimalName = animals[i];
+
+          if (currentAnimalName === animalName) {
+            return i;
+          }
+        }
+        return 'Not Found';
+      }
+      let findAnimalIndexTestResult = findAnimalIndex(
+        ['Elephant', 'Lion', 'Eagle'],
+        'Lion'
+      );
+
+      console.log('findAnimalIndex', findAnimalIndexTestResult);
+
+      //homework 14
+      function getNumbersLargerThanTen(numbers) {
+        let bagOfNumber = [];
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          if (currentNumber > 10) {
+            bagOfNumber.push(currentNumber);
+          }
+        }
+        return bagOfNumber;
+      }
+      let test14 = getNumbersLargerThanTen([5, 12, 8, 15, 3]);
+      console.log(test14);
+
+      //homework 15
+      function sum(numbers) {
+        let total = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          total = total + currentNumber;
+        }
+        return total;
+      }
+      let test15 = sum([3, 5, 7]);
+      console.log(test15);
+
+      //homework 16
+      function getArrayAverage(numbers) {
+        let getArrayAverageResult = sum(numbers) / numbers.length;
+        return getArrayAverageResult;
+      }
+      let test16 = getArrayAverage([10, 4, 8]);
+      console.log(test16);
+
+      //homework 17
+      function multiplicationTable(number) {
+        for (let i = 1; i < 11; i++) {
+          let multiplicationTableResult = `${number} * ${i} = ${i * number}`;
+          console.log(multiplicationTableResult);
+        }
+      }
+      multiplicationTable(7);
+    </script>
+  </body>
+</html>

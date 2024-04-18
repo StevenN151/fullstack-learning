@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <style>
+      body {
+        font-size: 20px;
+      }
+      .container {
+        width: 450px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      div {
+        margin-bottom: 20px;
+      }
+
+      .item {
+        flex: 1;
+      }
+      .item-age {
+        width: 150px;
+      }
+      .input {
+        height: 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 15px;
+        font-size: 25px;
+        color: #666;
+        text-indent: 14px;
+      }
+
+      button {
+        margin-top: 20px;
+        border: none;
+        background-color: crimson;
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        height: 50px;
+      }
+      button:hover {
+        background-color: rgb(163, 10, 41);
+      }
+      .summary-result {
+        background-color: lightseagreen;
+        font-size: 25px;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <label>
+          First Name
+          <input class="input firstname-input" type="text" name="first name" />
+        </label>
+      </div>
+      <div class="item">
+        <label>
+          Last name
+          <input class="input lastname-input" type="text" name="last name" />
+        </label>
+      </div>
+      <div class="item-age">
+        Age
+        <input class="input age-input" type="number" name="age" />
+      </div>
+      <div class="summary-result"></div>
+      <div>
+        <button>Create a summary</button>
+      </div>
+    </div>
+
+    <script>
+      function createSummary(firstname, lastname, age) {
+        return `Hello, my name is ${firstname} ${lastname}. I am ${age} years old!`;
+      }
+
+      let button = document.querySelector('button');
+      let firstnameInput = document.querySelector('.firstname-input');
+      let lastnameInput = document.querySelector('.lastname-input');
+      let ageInput = document.querySelector('.age-input');
+      let summaryResult = document.querySelector('.summary-result');
+
+      button.addEventListener('click', function () {
+        let firstname = firstnameInput.value;
+        let lastname = lastnameInput.value;
+        let age = ageInput.value;
+        let summary = createSummary(firstname, lastname, age);
+
+        summaryResult.textContent = summary;
+      });
+    </script>
+  </body>
+</html>

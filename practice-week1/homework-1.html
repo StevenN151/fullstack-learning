@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>homework 1 practise</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+      .photo-side {
+        width: 500px;
+        background-color: #ffffff;
+        display: flex;
+      }
+      .logo {
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 110px;
+        margin-bottom: 100px;
+      }
+      .paragraph {
+        color: #b5b5c3;
+        font-weight: 500;
+        font-size: 1.08rem;
+      }
+      .middle-banner {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .middle-banner-items {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+      }
+      .number {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+        border-radius: 26px;
+        background-color: #f3f6f9;
+        border: none;
+        justify-content: center;
+      }
+      .number-1 {
+        background-color: #c9f7f5;
+        color: green;
+        font-weight: bold;
+      }
+      img.footer-photo {
+        margin-top: 0px;
+        margin-left: 20px;
+        display: flex;
+        width: 400px;
+      }
+      .sign-in-side {
+        flex: 1;
+        background-color: #f3f5f9;
+      }
+      .top-banner {
+        position: absolute;
+        margin-bottom: 600px;
+        margin-right: -220px;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3699ff;
+      }
+      a:hover {
+        color: #0073e9;
+      }
+
+      .sign-in-side {
+        flex: 1;
+        background-color: #f3f5f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 30px;
+      }
+      .sign-in-field {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .p {
+        color: #b5b5c3;
+        font-weight: 500;
+        font-size: 1.05rem;
+      }
+      .mid-banner {
+        margin-bottom: 30px;
+      }
+      .label {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: black;
+      }
+
+      input {
+        background-color: #ffffff;
+        border: none;
+        height: 60px;
+        width: 500px;
+        border-radius: 8px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+      }
+      .footer {
+        position: relative;
+        top: 81px;
+        left: 181px;
+      }
+      .footer-p {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1.05rem;
+      }
+      button {
+        color: #ffffff;
+        background-color: #3699ff;
+        border-color: #3699ff;
+        width: 150px;
+        height: 50px;
+        border-radius: 14px;
+      }
+      .svg-icon {
+        position: absolute;
+        width: 30px;
+        left: 115px;
+        top: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="photo-side">
+        <div class="wrapper">
+          <a href="">
+            <img
+              class="logo"
+              src="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/logos/logo-1.png"
+            />
+          </a>
+          <div class="middle-banner">
+            <div class="middle-banner-items">
+              <div class="number number-1">
+                <span>1</span>
+              </div>
+              <div>
+                <h3>Account Settings</h3>
+                <div class="paragraph">Setup Your Account Details</div>
+              </div>
+            </div>
+            <div class="middle-banner-items">
+              <div class="number">
+                <span>2</span>
+              </div>
+              <div>
+                <h3>Account Details</h3>
+                <div class="paragraph">Setup Residence Address</div>
+              </div>
+            </div>
+            <div class="middle-banner-items">
+              <div class="number">
+                <span>3</span>
+              </div>
+              <div>
+                <h3>Make Payment</h3>
+                <div class="paragraph">Use Credit or Debit Cards</div>
+              </div>
+            </div>
+            <div class="middle-banner-items">
+              <div class="number">
+                <span>4</span>
+              </div>
+              <div>
+                <h3>Completed!</h3>
+                <div class="paragraph">Review and Submit</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              class="footer-photo"
+              src="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/features.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="sign-in-side">
+        <div class="top-banner">
+          <div class="p">Having issues? <a href="">Get Help</a></div>
+        </div>
+        <div class="sign-in-field">
+          <div>
+            <h2>Create Account</h2>
+            <div class="p mid-banner">
+              Already have an Account? <a href="">Sign In</a>
+            </div>
+          </div>
+          <form>
+            <div>
+              <label
+                ><div class="label p">First Name</div>
+                <input
+                  class="p"
+                  type="text"
+                  name="firstname"
+                  placeholder="First Name"
+                />
+              </label>
+            </div>
+            <div>
+              <label
+                ><div class="label p">Last Name</div>
+                <input
+                  class="p"
+                  type="text"
+                  name="lastname"
+                  placeholder="Last Name"
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                <div class="label p">Phone</div>
+                <input
+                  class="p"
+                  type="number"
+                  name="phonenumber"
+                  placeholder="Phone Number"
+                />
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="footer">
+          <button class="footer-p">Next Step</button>
+          <img
+            class="svg-icon"
+            src="https://www.svgrepo.com/show/533610/arrow-right.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

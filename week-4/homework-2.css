@@ -1,0 +1,178 @@
+body {
+  background-color: black;
+  padding-bottom: 80px;
+  margin: 0;
+}
+ul li {
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.top-banner {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.top-banner .top-banner-item {
+  width: 30%;
+}
+
+.top-banner-sydney {
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.logo-image {
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.main-menu-item {
+  text-align: right;
+}
+
+.main-menu-item a {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: gray;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  transition: all ease-in 400ms;
+}
+
+.main-menu-item.active a {
+  color: white;
+  background-color: red;
+}
+
+.main-menu-item a:hover {
+  color: white;
+  background-color: crimson;
+}
+
+.main-menu-item:last-child a {
+  margin-bottom: 0;
+}
+
+.mid-banner-record-list {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  margin-top: 50px;
+}
+
+.record-item-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.record-item-content {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+}
+.record-item-number {
+  font-size: 35px;
+}
+.record-item-text {
+  color: gray;
+}
+.about-me {
+  margin-top: 140px;
+  display: flex;
+  color: white;
+}
+.about-me-image,
+.about-me-content {
+  flex: 1;
+}
+.about-me-image {
+  text-align: center;
+}
+.about-me-image img {
+  max-width: 300px;
+}
+.section-title {
+  color: white;
+  font-size: 30px;
+  border-bottom: 4px solid red;
+}
+.favourite-videos {
+  margin-top: 100px;
+}
+
+.favourite-videos-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.favourite-video-item {
+  margin-top: 30px;
+}
+
+.favourite-video-item iframe {
+  border: 2px solid black;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.moving-border {
+  position: relative;
+}
+
+.moving-border::before,
+.moving-border::after {
+  content: '';
+  position: absolute;
+  border-radius: 4px;
+  inset: -2px;
+  z-index: -1;
+  background: linear-gradient(var(--angle), #032146, #c3f2ff, #b00);
+  animation: rotate 6s linear infinite;
+}
+.moving-border::after {
+  filter: blur(10px);
+}
+@keyframes rotate {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}

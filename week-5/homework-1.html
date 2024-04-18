@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        let total = x + y;
+        return total;
+      }
+      let sumResult = sum(12, 25);
+      console.log('sum result', sumResult);
+
+      function convertFtoC(number) {
+        let calculate = ((number - 32) * 5) / 9;
+        return calculate;
+      }
+
+      let cTemperature = convertFtoC(90);
+      console.log('Tempurature Result', cTemperature);
+
+      function greetMe(name, age) {
+        let GM = `My name is ${name} , I am ${age} years old`;
+        return GM;
+      }
+
+      let greetMeResult = greetMe('Hoang', 34);
+      console.log('greet me result', greetMeResult);
+    </script>
+  </body>
+</html>

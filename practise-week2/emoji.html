@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emoji</title>
+  </head>
+  <body>
+    <button>😀</button>
+    <button>😃</button>
+    <button>😄</button>
+    <button>😁</button>
+    <button>😆</button>
+    <button>😅</button>
+    <button>😂</button>
+    <button>🤣</button>
+    <div>
+      <input />
+    </div>
+
+    <script>
+      //select all buttons
+      let buttons = document.querySelectorAll('button');
+      let input = document.querySelector('input');
+      // loop thru all buttons
+      for (let i = 0; i < buttons.length; i++) {
+        // get the current button
+        let currentButton = buttons[i];
+        currentButton.addEventListener('click', function () {
+          // get currentButton text or innerHTML
+          let currentButtonText = currentButton.innerHTML;
+          // get current value of the input
+          let currentValue = input.value;
+          // create a new value which is the current value of the input + currentButton text above
+          let newValue = currentButtonText + currentValue;
+          // set the input value to the newValue
+          input.value = newValue;
+        });
+      }
+    </script>
+  </body>
+</html>

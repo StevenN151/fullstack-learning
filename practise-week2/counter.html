@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter</title>
+  </head>
+  <body>
+    <button class="minus">- 1</button>
+    <input type="number" class="input" />
+    <button class="add">+ 1</button>
+    <script>
+      let minusButton = document.querySelector('.minus');
+      let addButton = document.querySelector('.add');
+      let input = document.querySelector('.input');
+      minusButton.addEventListener('click', function () {
+        // Get current input value
+        let currentInputValue = input.value;
+        // Create a new variable: a number which is the input value - 1
+        let newValue = currentInputValue - 1;
+        // set the new number back into input value
+        input.value = newValue;
+      });
+
+      addButton.addEventListener('click', function () {
+        // get the current input value
+        let currentInputValue = input.value;
+        // currentInputValue is a string, convert currentINputValue to number
+        currentInputValue = Number(currentInputValue);
+        // create new  variable = input value
+        let newValue = currentInputValue + 1;
+        // set new value back to input value
+        input.value = newValue;
+      });
+    </script>
+  </body>
+</html>

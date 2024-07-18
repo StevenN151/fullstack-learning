@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .button {
+        height: 50px;
+        width: 200px;
+        background-color: #007bff;
+        color: white;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="button">Click me to open an alert</button>
+    </div>
+
+    <script>
+      let button = document.querySelector('.button');
+      let buttonClick = function () {
+        alert('button click');
+      };
+
+      button.addEventListener('click', buttonClick);
+    </script>
+  </body>
+</html>

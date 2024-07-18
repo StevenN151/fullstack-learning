@@ -1,0 +1,26 @@
+Requirement
+- Change the page <body> background color to rainbow colors in order  
+- when a button is clicked ( red -> orange -> yellow -> green -> blue -> indigo -> violet -> red )
+    - body class will change to the text inside the button
+    - the text inside the button will change to the next color
+    - the text inside the button will also have the class name of the next color
+Code 
+- Have 2 variables current COlor and next color 
+- Select button
+- Create an onClick function
+- add event "click" to the button
+- WHen onCLick function is called (user clicks the button)
+- body remove class currentColor
+- body ad class nextColor
+- set currentColor to the value of nextColor
+
+- remove the span nextColor class
+
+- set the nextColor to the potential next color 
+- set the span text to the nextColor
+
+- set the span class to the nextColor
+
+if (nextColor === 'orange') {
+    nextColor = 'yellow'
+} else if (nextColor)

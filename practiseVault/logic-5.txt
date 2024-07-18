@@ -1,0 +1,23 @@
+Requirement
+- When the button "Change box background to red" is clicked
+    - The box background color will change to red
+    - The button text will change to "Change box background to default color"
+- When the button "Change box background to default" is clicked
+    - Thex box background will go back to the default background
+    - The button text will change back to "Change box background to red"
+
+- When the button "Make the box becomes bigger" is clicked
+    - The box size will become bigger
+    - The button text will change to "Change box size to the default"
+
+Code
+1.1 Select the button
+1.2 Create function click
+1.3 Add the click event to the button
+1.4 Create a new class .red in our HTML style to create red background
+1.5 When the click event happens
+1.6 Check if the box has class "red"
+1.7 if it does not have class "red", add class "red" to the box
+1.8 Change the button text to "Change box background to default"
+1.9 if the box has the class "red", remove class "red" from the box
+1.10 CHange the button text to "Change the box background to red"

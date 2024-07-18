@@ -26,15 +26,24 @@ fetch(animeURL)
         allGenres = allGenres + ` - ${genreName}`;
       }
     }
-
+    //producers
     let producers = [];
     for (let i = 0; i < data.producers.length; i++) {
       let currentProducer = data.producers[i];
-      let producerName = currentProducer.namne;
+      let producerName = currentProducer.name;
       producers.push(producerName);
     }
     console.log(producers);
     let producerNames = producers.join('-');
+
+    //titles
+    let titles = [];
+    for (let i = 0; i < data.titles.length; i++) {
+      let currentTitle = data.titles[i];
+      let titleName = currentTitle.title;
+      titles.push(titleName);
+    }
+    let titleNames = titles.join(';');
 
     let newContent = `
     <div class="col col-md-4">
@@ -44,11 +53,11 @@ fetch(animeURL)
         <div class="display-5 mb-2">${data.title_english}</div>
         <div class="mb-3">
             <strong class="me-3">Alternative</strong>
-            <span></span>
+            <span>${titles.join(';')}</span>
         </div>
         <div class="mb-3">
             <strong class="me-3">Producers</strong>
-            <span></span>
+            <span>${producers.join('-')}</span>
         </div>
         <div class="mb-3">
             <strong class="me-3">Status</strong>
@@ -56,7 +65,7 @@ fetch(animeURL)
         </div>
         <div class="mb-3">
             <strong class="me-3">Genres</strong>
-            <span></span>
+            <span>${allGenres}</span>
         </div>
         <div class="mb-3">
             <strong class="me-3">Rating</strong>

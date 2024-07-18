@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 17 - This context</title>
+  </head>
+  <body>
+    <button data-component="btn-1">Button 1</button>
+    <button data-component="btn-2">Button 2</button>
+
+    <script>
+      let anObject = {
+        message: '1. Message from an object',
+        alertMessage: function () {
+          alert(this.message);
+        },
+      };
+
+      let anotherObject = {
+        message: '2. MESSAGE FROM ANOTHER OBJECT',
+      };
+
+      let newAlertMessage = anObject.alertMessage.bind(anotherObject);
+
+      // Will alert "2. MESSAGE FROM ANOTHER OBJECT"
+      newAlertMessage();
+    </script>
+  </body>
+</html>

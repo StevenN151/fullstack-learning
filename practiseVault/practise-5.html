@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .button-1 {
+        color: #007bff;
+        background-color: white;
+        height: 50px;
+        border-radius: 3px;
+        border: 1px solid #007bff;
+      }
+
+      .button-1:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .button-2 {
+        color: #d9792f;
+        background-color: white;
+        height: 50px;
+        border-radius: 3px;
+        border: 1px solid #d9792f;
+      }
+      .button-2:hover {
+        color: white;
+        background-color: #d9792f;
+      }
+      .button-3 {
+        color: #ca2323;
+        background-color: white;
+        height: 50px;
+        border-radius: 3px;
+        border: 1px solid #ca2323;
+      }
+      .button-3:hover {
+        color: white;
+        background-color: #ca2323;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ccc;
+        margin-top: 20px;
+      }
+      .red {
+        background-color: red;
+      }
+      .bigger {
+        width: 200px;
+        height: 200px;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <button class="button-1">Change box background to default</button>
+        <button class="button-2">
+          make the box goes back to its default size
+        </button>
+        <button class="button-3">hide the box</button>
+      </div>
+      <div class="box red bigger hide"></div>
+    </div>
+    <script>
+      let buttonOne = document.querySelector('.button-1');
+      let buttonTwo = document.querySelector('.button-2');
+      let buttonThree = document.querySelector('.button-3');
+
+      let box = document.querySelector('.box');
+      let buttonClickChangeColor = function () {
+        if (box.classList.contains('red')) {
+          box.classList.remove('red');
+          buttonOne.innerHTML = 'Change box background to red';
+        } else {
+          box.classList.add('red');
+          buttonOne.innerHTML = 'Change box background to default';
+        }
+      };
+
+      let buttonClickChangeSize = function () {
+        if (box.classList.contains('bigger')) {
+          box.classList.remove('bigger');
+          buttonTwo.innerHTML = 'Change box to bigger size';
+        } else {
+          box.classList.add('bigger');
+          buttonTwo.innerHTML = 'Change box to default size';
+        }
+      };
+
+      let buttonClickHideBox = function () {
+        if (box.classList.contains('hide')) {
+          box.classList.remove('hide');
+          buttonThree.innerHTML = 'Hide the box';
+        } else {
+          box.classList.add('hide');
+          buttonThree.innerHTML = 'Show the box';
+        }
+      };
+
+      buttonOne.addEventListener('click', buttonClickChangeColor);
+      buttonTwo.addEventListener('click', buttonClickChangeSize);
+      buttonThree.addEventListener('click', buttonClickHideBox);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .the-box {
+        min-height: 100px;
+        width: 500px;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 200px;
+        padding-left: 10px;
+      }
+      h2.title {
+        border-bottom: 1px solid #f4f4f4;
+        padding-bottom: 10px;
+      }
+      .content {
+        border-bottom: 1px solid #f4f4f4;
+        min-height: 50px;
+      }
+      .button-wrapper {
+        padding-top: 9px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+      }
+      button {
+        width: 130px;
+        height: 40px;
+        border-radius: 3px;
+        border: 1px solid #007bff;
+        color: #007bff;
+        background-color: white;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="the-box">
+        <h2 class="title">Personal Details</h2>
+        <div class="content">Content hidden</div>
+        <div class="button-wrapper">
+          <button>Show Details</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        occupation: 'Software engineer',
+      };
+
+      let button = document.querySelector('button');
+      let content = document.querySelector('.content');
+      let showDetails = false;
+      let buttonClick = function () {
+        if (showDetails) {
+          showDetails = false;
+          button.innerHTML = 'Show Details';
+          content.innerHTML = 'Content hidden';
+        } else {
+          showDetails = true;
+          button.innerHTMl = 'Hide Details';
+          content.innerHTML = `
+            <p><span class="label">Name :<span>${person.firstName} ${person.lastName}</p>
+            <p><span class="label">Age :</span>${person.age}</p>
+            <p><span class="label">Occupation :</span>${person.occupation}</p>
+          `;
+        }
+      };
+      button.addEventListener('click', buttonClick);
+    </script>
+  </body>
+</html>

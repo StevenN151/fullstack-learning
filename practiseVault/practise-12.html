@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        background-color: white;
+        height: 150px;
+        width: 550px;
+        padding-left: 10px;
+        min-height: 130px;
+      }
+      input.input {
+        width: 200px;
+        height: 40px;
+      }
+      button.button {
+        width: 135px;
+        height: 46px;
+        margin-left: 10px;
+      }
+      h2 {
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <h2>List of Names</h2>
+        <div>
+          <input class="input" type="number" placeholder="Number" />
+          <button class="button">Print</button>
+        </div>
+        <ul class="list"></ul>
+      </div>
+    </div>
+    <script>
+      let list = document.querySelector('.list');
+      let input = document.querySelector('.input');
+      let printButton = document.querySelector('.button');
+      let buttonClick = function () {
+        list.innerHTML = `<li>1</l1>
+            <li>2</li><li>3</li>`;
+
+        // we need to repeat the string <li>{i}</li> number of times
+
+        // get value of input
+        let inputValue = input.value;
+        let number = Number(inputValue);
+        let content = '';
+        // loop thru all numbers
+        for (let i = 1; i <= number; i++) {
+          content = content + `<li class="">${i}</li>`;
+        }
+        list.innerHTML = content;
+        // get all numbers length
+        // when click print will display all numbers in input
+      };
+
+      printButton.addEventListener('click', buttonClick);
+    </script>
+  </body>
+</html>

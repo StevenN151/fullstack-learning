@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 17 - classes</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="app-2"></div>
+    <div id="app-3"></div>
+
+    <script>
+      class Counter {
+        #container;
+        #decreaseBtn;
+        #increaseBtn;
+        #input;
+
+        constructor(container) {
+          this.#container = container;
+
+          this.#render();
+        }
+
+        #decrease() {
+          let inputValue = Number(this.#input.value);
+          let newValue = inputValue - 1;
+          this.#input.value = newValue;
+        }
+
+        #increase() {
+          let inputValue = Number(this.#input.value);
+          let newValue = inputValue + 1;
+          this.#input.value = newValue;
+        }
+
+        #render() {
+          this.#container.innerHTML = `
+            <button data-component="decrease">-</button>
+            <input type="number" value="0" />
+            <button data-component="increase">+</button>`;
+
+          this.#decreaseBtn = this.#container.querySelector(
+            '[data-component="decrease"]'
+          );
+
+          this.#decreaseBtn.addEventListener(
+            'click',
+            this.#decrease.bind(this)
+          );
+
+          this.#increaseBtn = this.#container.querySelector(
+            '[data-component="increase"]'
+          );
+          this.#increaseBtn.addEventListener(
+            'click',
+            this.#increase.bind(this)
+          );
+          this.#input = this.#container.querySelector('input');
+        }
+      }
+      let counterApp = new Counter(document.querySelector('#app'));
+      let counterApp2 = new Counter(document.querySelector('#app-2'));
+      let counterApp3 = new Counter(document.querySelector('#app-3'));
+    </script>
+  </body>
+</html>

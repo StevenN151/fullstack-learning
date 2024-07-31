@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: #ededed;
+      }
+      h1 {
+        font-size: 80px;
+        font-family: math;
+        color: #a33b3b;
+        font-style: normal;
+      }
+      input.input {
+        height: 65px;
+        width: 500px;
+        text-indent: 50px;
+        font-size: 25px;
+        font-style: italic;
+        border: none;
+      }
+      .footer {
+        font-size: 12px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .main-wrappermain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      a {
+        color: #040404;
+        text-decoration: none;
+      }
+      .footer p {
+        margin-top: 0px;
+      }
+      .output {
+        margin-left: -50px;
+      }
+      li {
+        margin-top: 15px;
+        height: 40px;
+        width: 500px;
+        background-color: white;
+        border: 2px solid #f8f8f8;
+        border-radius: 3px;
+      }
+      .XBtn {
+        border: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrappermain">
+      <h1>todos</h1>
+      <div class="content">
+        <input class="input" placeholder="What needs to be done?" />
+        <button data-component="add">ADD</button>
+      </div>
+      <div class="output"></div>
+      <div class="footer">
+        <p>Double-click to edit a todo</p>
+        <p>Created by the TodoMVC Team</p>
+        <div>
+          <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let input = document.querySelector('.input');
+      let addBtn = document.querySelector('[data-component="add"]');
+
+      function addBtnClick() {
+        let inputValue = input.value;
+        if (inputValue) {
+          let listItem = createOutputItem(inputValue);
+          document.querySelector('.output').appendChild(listItem);
+          input.value = '';
+        }
+      }
+
+      addBtn.addEventListener('click', addBtnClick);
+
+      function createOutputItem(item) {
+        let listItem = document.createElement('li');
+
+        listItem.innerHTML = `${item}
+        <button data-component="delete" class="XBtn">X</button>`;
+
+        let deleteBtn = listItem.querySelector('[data-component="delete"]');
+        deleteBtn.addEventListener('click', DeleteButtonClick);
+        return listItem;
+      }
+
+      function DeleteButtonClick(event) {
+        let currentButton = event.target;
+        let listItem = currentButton.parentElement;
+        listItem.remove('li');
+      }
+
+      if (key === 'Enter') {
+        action = addBtn;
+      }
+    </script>
+  </body>
+</html>

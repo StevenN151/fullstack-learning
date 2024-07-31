@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .red {
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .indigo {
+        background-color: indigo;
+      }
+      .violet {
+        background-color: violet;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+      }
+      button.button {
+        height: 30px;
+        width: 125px;
+        cursor: grab;
+      }
+    </style>
+  </head>
+  <body class="red">
+    <div class="wrapper">
+      <button class="button">
+        To
+        <span class="orange">orange</span>
+      </button>
+    </div>
+    <script>
+      const button = document.querySelector('button');
+      const body = document.body;
+      const span = button.querySelector('span');
+      const currentColor = 'red';
+      const nextColor = 'orange';
+
+      button.addEventListener('click', () => {
+        body.classList.remove(currentColor);
+        body.classList.add(nextColor);
+
+        currentColor = nextColor;
+        span.classList.remove(nextColor);
+
+        if (nextColor === 'red') {
+          nextColor = 'orange';
+        } else if (nextColor === 'orange') {
+          nextColor = 'yellow';
+        } else if (nextColor === 'yellow') {
+          nextColor = 'green';
+        } else if (nextColor === 'green') {
+          nextColor = 'blue';
+        } else if (nextColor === 'blue') {
+          nextColor = 'indigo';
+        } else if (nextColor === 'indigo') {
+          nextColor = 'violet';
+        } else if (nextColor === 'violet') {
+          nextColor = 'red';
+        }
+
+        span.classList.add(nextColor);
+        span.innerHTML = nextColor;
+      });
+    </script>
+  </body>
+</html>

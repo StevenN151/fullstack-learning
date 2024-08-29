@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: #f4f4f4;
+  height: 500px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.black {
+  background-color: black;
+}

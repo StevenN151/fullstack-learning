@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+      }
+      .wrapper {
+        width: 600px;
+        height: 200px;
+        background-color: white;
+        border-radius: 5px;
+        border: none;
+        padding-left: 20px;
+        margin-top: 50px;
+      }
+      input.firstname {
+        height: 30px;
+        width: 180px;
+        border-radius: 3px;
+        border: 1px solid grey;
+      }
+      input.lastname {
+        height: 30px;
+        width: 180px;
+        border-radius: 3px;
+        border: 1px solid grey;
+      }
+      button {
+        height: 35px;
+        width: 130px;
+        color: white;
+        background-color: #007bff;
+        border-radius: 3px;
+        border: none;
+      }
+      .fullname {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Enter Your Names</h1>
+      <div>
+        <input class="firstname" type="text" placeholder="First Name" />
+        <input class="lastname" type="text" placeholder="Last Name" />
+        <button>Show Full Name</button>
+      </div>
+      <h3 class="fullname">Full name :</h3>
+    </div>
+
+    <script>
+      const button = document.querySelector('button');
+      const inputFirstName = document.querySelector('.firstname');
+      const inputLastName = document.querySelector('.lastname');
+      const fullName = document.querySelector('.fullname');
+
+      button.addEventListener('click', () => {
+        let firstName = inputFirstName.value;
+        let lastName = inputLastName.value;
+        fullName.innerHTML = `Full name : ${firstName} ${lastName}`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 80px;
+}
+
+.photo {
+  background-image: url(https://images.unsplash.com/photo-1576005391034-242dd8f40823);
+  background-position: center center;
+  background-size: cover;
+
+  width: 800px;
+  height: 800px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1.title {
+  width: 450px;
+  font-size: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid lightgray;
+}
+.under-title {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: gray;
+  font-style: i;
+}
+.content-main {
+  display: flex;
+  gap: 80px;
+  text-align: justify;
+  width: 600px;
+}
+.uppercase {
+  background-image: url(https://media.baamboozle.com/uploads/images/113721/1657835758_17680_gif-url.gif);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  float: left;
+}
+.content-main-left {
+  font-family: SUSE, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.content-main-right {
+  font-family: SUSE, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

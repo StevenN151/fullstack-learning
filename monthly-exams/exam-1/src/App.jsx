@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
-
 import './App.css';
+import { useState } from 'react';
 
 const colors = ['red', 'green', 'blue', 'purple', 'orange', 'black'];
 
 function App() {
-  const [colorIndex, setColor] = useState('');
-  const buttonColor = colors[colorIndex];
-  const onButtonClick = () => {
-    //wrapper(buttonColor)
+  const [currentColor, setCurrentColor] = useState('');
+  const onButtonClick = (color) => {
+    setCurrentColor(color);
   };
 
   return (
-    <div className={`wrapper ${buttonColor}`}>
-      <div>
-        <button className="button" onClick={onButtonClick}></button>
+    <div className={`container ${currentColor}`}>
+      <div className="buttons">
+        {colors.map((color) => (
+          <button
+            key={color}
+            className={`button ${color}`}
+            onClick={() => onButtonClick(color)}
+          >
+            {color}
+          </button>
+        ))}
       </div>
+      <h1>Current color is: "{currentColor}"</h1>
     </div>
   );
 }

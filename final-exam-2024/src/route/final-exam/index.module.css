@@ -1,0 +1,24 @@
+.taskContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.imgDelete {
+  width: 50px;
+}
+
+.imgTask {
+  width: 300px;
+}
+
+.taskWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal {
+  width: 200px;
+  height: 100px;
+}
